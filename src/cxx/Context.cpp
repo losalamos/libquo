@@ -179,4 +179,8 @@ bool Context::auto_distrib(ObjectType distrib_over_this,
   return (selected != 0);
 }
 
+void Context::barrier() const {
+  QUO_CXX_HANDLE_ERROR(QUO_barrier(m_impl->ctx));
+}
+
 } /* namespace quo */
